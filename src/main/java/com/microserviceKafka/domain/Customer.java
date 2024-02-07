@@ -21,8 +21,8 @@ public class Customer {
 	private Long id;
 	private FirstName firstName;
 	private String lastName;
-	private LocalDate birthDate;
-	private String emailAddress;
+	private BirthDate birthDate;
+	private EmailAddress emailAddress;
 	
 
 }
