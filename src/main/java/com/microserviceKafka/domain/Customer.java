@@ -19,7 +19,7 @@ public class Customer {
 	@Id
 	@GeneratedValue
 	private Long id;
-	private String firstName;
+	private FirstName firstName;
 	private String lastName;
 	private LocalDate birthDate;
 	private String emailAddress;
