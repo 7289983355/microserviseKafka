@@ -10,7 +10,7 @@ public class EmailAddressTest {
 	@Test
 	void of() {
 
-		var emailAddress = "dharmeshkumar123432@gmail.com";
+		var emailAddress = "dharmeshkumar@gmail.com";
 
 		EmailAddress actualEmail = EmailAddress.of(emailAddress);
 		Assertions.assertNotNull(emailAddress);
