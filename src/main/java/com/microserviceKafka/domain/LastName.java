@@ -4,6 +4,7 @@ import java.util.Objects;
 
 import org.springframework.util.Assert;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access=AccessLevel.PROTECTED)
 public class LastName {
 
+	@Column(name ="LastName")
 	private String value;
 
 	private LastName(String value) {

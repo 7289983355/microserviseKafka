@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 import org.springframework.util.Assert;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class EmailAddress {
 
+	@Column(name = "EmailAddress")
 	private String value;
 
 	private EmailAddress(String value) {

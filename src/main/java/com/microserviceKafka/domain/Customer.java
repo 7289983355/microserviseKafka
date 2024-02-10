@@ -1,7 +1,5 @@
 package com.microserviceKafka.domain;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -12,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@NoArgsConstructor
+@NoArgsConstructor                    
 @AllArgsConstructor
 public class Customer {
 
@@ -20,11 +18,11 @@ public class Customer {
 	@GeneratedValue
 	private Long id;
 	private FirstName firstName;
-	private String lastName;
+	private LastName lastName;
 	private BirthDate birthDate;
 	private EmailAddress emailAddress;
 
-	private Customer(FirstName firstName, String lastName, BirthDate birthDate, EmailAddress emailAddress) {
+	private Customer(FirstName firstName, LastName lastName, BirthDate birthDate, EmailAddress emailAddress) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -32,7 +30,7 @@ public class Customer {
 		this.emailAddress = emailAddress;
 	}
 
-	public static Customer createCustomer(FirstName firstName, String lastName, BirthDate birthDate,
+	public static Customer createCustomer(FirstName firstName, LastName lastName, BirthDate birthDate,
 			EmailAddress emailAddress) {
 
 		return new Customer(firstName, lastName, birthDate, emailAddress);
@@ -42,4 +40,6 @@ public class Customer {
 
 		this.emailAddress = emailAddress;
 	}
+
+	
 }

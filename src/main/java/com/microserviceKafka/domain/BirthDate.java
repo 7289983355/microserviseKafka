@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import org.springframework.util.Assert;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access=AccessLevel.PROTECTED)
 public class BirthDate {
 	
+	@Column(name ="BirthDate")
 	private LocalDate value;
 
 	private BirthDate(LocalDate value) {
@@ -25,7 +27,7 @@ public class BirthDate {
 	public static BirthDate of(final LocalDate value) {
 		
 		Objects.requireNonNull(value ,"firstName cannot be null");
-		Assert.isTrue(!value.isBefore(LocalDate.now()),"birth date can be any past value");
+		Assert.isTrue(value.isBefore(LocalDate.now()),"birth date can be any past value");
 		return new BirthDate(value);
 	}
 	
